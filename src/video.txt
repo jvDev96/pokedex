@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=UhOcUII_5PU
+
+01:10:00 - $padding
+width: calc(49% - $padding)

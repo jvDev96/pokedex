@@ -1,0 +1,124 @@
+@import '../../../config-scss/rem-calc.scss';
+@import '../../../config-scss/variables.scss';
+
+:host{
+  .listagem{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+
+  .pokemon{
+    position: relative;
+    display: flex;
+    background: var(--branco);
+
+    width: 42%;
+    height: rem-calc(100);
+    padding: rem-calc(20);
+
+    border-radius: rem-calc(10);
+
+    justify-content: space-between;
+
+    vertical-align: middle;
+
+    margin-bottom: rem-calc(10);
+
+    &__status{
+      color: black;
+      h2{
+        margin-top: 5%;
+        font-size: rem-calc(22);
+        font-style: italic;
+        font-weight: 700;
+        text-transform: capitalize;
+      }
+      ul{
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+
+        li{
+
+          border: none;
+          border-radius: rem-calc(40);
+          background: rgb(173, 173, 173);
+          margin: 5% 0 2% 15%;
+          display: flex;
+          max-width: 50%;
+          justify-content: center;
+          align-items: center;
+
+          padding: rem-calc(4) rem-calc(15);
+
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    &__image{
+      position: absolute;
+      bottom: rem-calc(10);
+      right: rem-calc(15);
+    }
+
+    .pokemon__image{
+      img{
+        width: rem-calc(110);
+        height: rem-calc(110);
+      }
+    }
+  }
+
+  .pokemon:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+
+    background: rgb(211, 211, 211);
+
+    // h2{
+    //   color: var(--secondary-color);
+    // }
+
+    // li{
+    //   color: var(--branco);
+    //   background:  var(--secondary-color) !important;
+    // }
+
+    .fire{
+      transition: 0.1s;
+      background: rgba(255, 0, 0, 0.596) !important;
+    }
+    .water{
+      transition: 0.1s;
+      background: rgba(0, 0, 255, 0.5) !important;
+    }
+    .poison{
+      transition: 0.1s;
+      background: rgba(132, 3, 206, 0.5) !important;
+    }
+    .ground{
+      transition: 0.1s;
+      background: rgba(180, 123, 18, 0.603) !important;
+    }
+    .eletric{
+      transition: 0.1s;
+      background: rgba(255, 238, 0, 0.589) !important;
+    }
+    .grass{
+      transition: 0.1s;
+      background: rgba(17, 146, 0, 0.5) !important;
+    }
+    .bug{
+      transition: 0.1s;
+      background: rgba(17, 146, 0, 0.5) !important;
+    }
+    .fairy{
+      transition: 0.1s;
+      background: rgba(248, 75, 219, 0.5) !important;
+    }
+  }
+
+
+}

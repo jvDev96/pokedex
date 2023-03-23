@@ -1,0 +1,121 @@
+@import '../../../config-scss/rem-calc.scss';
+@import '../../../config-scss/variables.scss';
+@import '../../../config-scss/btn.scss';
+
+:host{
+  main{
+    margin-top: rem-calc(40);
+
+    .pokemon__names{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      height: rem-calc(75);
+
+      padding: 0 rem-calc(30);
+
+      h1{
+        color: var(--branco);
+        font-size: rem-calc(32);
+        text-transform: capitalize;
+      }
+
+      h2{
+        position: absolute;
+        font-weight: 700;
+        top: 0;
+        font-size: rem-calc(60);
+        color: rgba(255,255,255,0.1);
+
+        transition: 0.5s;
+      }
+
+      h2:hover{
+        color: var(--secondary-color);
+
+        transition: 0.5s;
+      }
+    }
+
+    .pokemon__status{
+      position: relative;
+
+      .stats{
+        text-transform: capitalize;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: rem-calc(100);
+        section{
+          width: 44%
+        };
+
+        strong{
+          font-weight: bold;
+        }
+      }
+
+      .pokemon_img{
+        transition: 0.34s;
+        width: rem-calc(130);
+        max-height: rem-calc(170);
+        position: absolute;
+        top: rem-calc(-90);
+        left: rem-calc(55);
+      }
+
+      .pokemon_img:hover{
+        transition: 0.34s;
+        transform: scale(1.15);
+      }
+
+      &__statistics{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        background: var(--branco);
+
+        min-height: 33.9vh;
+        margin-top: rem-calc(10);
+        padding: rem-calc(100) rem-calc(35) rem-calc(30);
+
+        border-radius: rem-calc(50) rem-calc(50) 0 0;
+
+        h3{
+          margin-bottom: rem-calc(20);
+          font-style: italic;
+          font-size: rem-calc(30);
+          font-weight: bold;
+          color: var(--secondary-color);
+        }
+
+        ol{
+          li{
+            display: flex;
+            justify-content: space-between;
+
+            // color: var(--secondary-color);
+
+            font-weight: 500;
+            font-size: rem-calc(18);
+            line-height: 130%;
+
+            padding: rem-calc(1.5) rem-calc(3);
+            margin: rem-calc(3) 0;
+            max-width: 100%;
+          }
+        }
+
+        .chart{
+          display: flex;
+          flex-direction: column;
+          .weak-against{
+            margin-top: rem-calc(15);
+          }
+        }
+      }
+    }
+  }
+}

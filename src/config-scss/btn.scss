@@ -1,0 +1,32 @@
+@import './rem-calc.scss';
+@import './variables.scss';
+
+.btn{
+  transition: 0.5s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: rem-calc(20) 0;
+  border-radius: rem-calc(10);
+
+  text-decoration: none;
+
+  &__primary{
+    color: var(--branco);
+    background: var(--primary-color);
+  }
+
+  &__secondary{
+    color: var(--branco);
+    background: var(--secondary-color);
+  }
+}
+
+.btn:hover{
+  background: var(--secondary-color-hover);
+  transition: 0.5s;
+  transform: scale(1.02);
+}
